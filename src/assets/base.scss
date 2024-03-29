@@ -1,5 +1,6 @@
 :root {
 }
+
 .flex {
   display: flex;
   display: -webkit-flex;
@@ -31,7 +32,7 @@
   flex-grow: 1;
   flex: 1;
 }
-// flex grow 에서 elipse 처리하기위해
+
 .width_0 {
   width: 0;
 }
