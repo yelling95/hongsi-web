@@ -1,4 +1,35 @@
 :root {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Emoji", sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 4px;
+  }
+}
+
+.shadow {
+  -webkit-box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 .flex {
