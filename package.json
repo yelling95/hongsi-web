@@ -7,18 +7,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --config ./webpack.config.js",
-    "build": "webpack --mode production --config ./webpack.config.js"
+    "build": "webpack --mode production --config ./webpack.config.js",
+    "ui": "yarn remove hongsi-ui && yarn add hongsi-ui"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.2",
     "classnames": "^2.3.2",
-    "hongsi-ui": "^1.0.4",
+    "hongsi-ui": "^1.0.16",
     "lodash-es": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.6.2"
+    "react-router-dom": "^6.6.2",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
