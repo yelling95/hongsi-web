@@ -20,6 +20,21 @@ export const SliderImage = {
   desc: '',
 }
 
+export const FeedMoreOptList = () => {
+  return [
+    {
+      id: 'chat',
+      label: '대화하기',
+      url: '',
+    },
+    {
+      id: 'report',
+      label: '신고하기',
+      url: '',
+    },
+  ]
+}
+
 export const SampleFeedFilterList = () => {
   return [
     '전체',
@@ -61,7 +76,7 @@ export const SampleFeedList = range(1, 11, 1).map((dummy) => {
     title: '제목 ' + dummy,
     subtitle: '소제목 ' + dummy,
     likeCnt: 10,
-    chatCnt: 3,
+    commentCnt: 3,
     gather: false,
     declare: false,
     imageList:

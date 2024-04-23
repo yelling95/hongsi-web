@@ -1,5 +1,5 @@
 import React from 'react'
-import {HomeView} from './pages'
+import {HomeView, CommentView} from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 export default function App(props) {
@@ -7,6 +7,10 @@ export default function App(props) {
     {
       path: '/',
       element: <HomeView />,
+    },
+    {
+      path: 'comment',
+      element: <CommentView />,
     },
   ])
 

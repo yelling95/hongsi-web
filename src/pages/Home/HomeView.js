@@ -1,8 +1,14 @@
 import React, {useState} from 'react'
 import Slider from 'react-slick'
-import {HomeHeader, Sheet, Footer, SortHeader, Feed, Dropdown} from 'hongsi-ui'
+import {HomeHeader, Sheet, Footer, SortHeader, Feed, Dropdown, MoreOption} from 'hongsi-ui'
 import {Menus} from './const'
-import {SliderOpt, SampleFeedList, SampleFeedFilterList, SampleFeedOrderList} from './structure'
+import {
+  SliderOpt,
+  SampleFeedList,
+  SampleFeedFilterList,
+  SampleFeedOrderList,
+  FeedMoreOptList,
+} from './structure'
 import {map} from 'lodash-es'
 
 import './Slick.scss'
@@ -10,12 +16,26 @@ import './Home.scss'
 
 function HomeView(props) {
   const [feedList, setFeedList] = useState(SampleFeedList)
+
   const [orderOptions, setOrderOptions] = useState(SampleFeedOrderList())
   const [filterOptions, setFilterOptions] = useState(SampleFeedFilterList())
+  const [moreOptions, setMoreOptions] = useState(FeedMoreOptList())
+
   const [order, setOrder] = useState(orderOptions[0])
   const [filter, setFilter] = useState(filterOptions[0])
+  const [feed, setFeed] = useState(null)
+
   const [isOpenOrder, setOpenOrder] = useState(false)
   const [isOpenFilter, setOpenFilter] = useState(false)
+  const [isOpenMore, setOpenMore] = useState(false)
+
+  const updateFeedLikeStatus = (feed, like = true) => {
+    console.log(feed.id, like)
+  }
+
+  const openFeedCommentPage = (feed) => {
+    setFeed(feed)
+  }
 
   return (
     <div className="home_container">
@@ -29,7 +49,11 @@ function HomeView(props) {
       />
       <div className="scroll_wrap">
         {map(feedList, (feed) => (
-          <Feed key={`feed-${feed.id}`}>
+          <Feed
+            key={`feed-${feed.id}`}
+            onClickLike={updateFeedLikeStatus}
+            onClickComment={openFeedCommentPage}
+            onClickMore={() => setOpenMore(true)}>
             {feed.imageList && feed.imageList.length > 0 && (
               <div className="slider_wrap" style={{height: 540}}>
                 <Slider key={`slider-${feed.id}`} {...SliderOpt}>
@@ -49,7 +73,7 @@ function HomeView(props) {
         id="order"
         isShow={isOpenOrder}
         isShowDimm={true}
-        selected={order}
+        selected={order?.id}
         close={() => setOpenOrder(false)}
         options={map(orderOptions, (o) => ({
           ...o,
@@ -62,12 +86,24 @@ function HomeView(props) {
         id="filter"
         isShow={isOpenFilter}
         isShowDimm={true}
-        selected={filter}
+        selected={filter?.id}
         close={() => setOpenFilter(false)}
         options={map(filterOptions, (o) => ({
           ...o,
           click: () => {
             alert(o.id)
+          },
+        }))}
+      />
+      <MoreOption
+        id="more"
+        isShow={isOpenMore}
+        isShowDimm={true}
+        close={() => setOpenMore(false)}
+        options={map(moreOptions, (o) => ({
+          ...o,
+          click: () => {
+            alert(o.id, o.url)
           },
         }))}
       />

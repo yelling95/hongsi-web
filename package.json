@@ -14,7 +14,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.2",
     "classnames": "^2.3.2",
-    "hongsi-ui": "^1.0.16",
+    "hongsi-ui": "^1.0.20",
     "lodash-es": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
