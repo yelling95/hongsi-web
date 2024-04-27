@@ -10,6 +10,7 @@ import {
   FeedMoreOptList,
 } from './structure'
 import {map} from 'lodash-es'
+import {Outlet, useLocation, useParams} from 'react-router-dom'
 
 import './Slick.scss'
 import './Home.scss'
@@ -39,6 +40,7 @@ function HomeView(props) {
 
   return (
     <div className="home_container">
+      <Outlet />
       <HomeHeader />
       <Sheet message="텍스트는 <br/>최대 두 줄까지 적어주세요" />
       <SortHeader

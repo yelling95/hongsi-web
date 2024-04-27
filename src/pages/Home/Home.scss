@@ -3,13 +3,19 @@
     padding-bottom: 54px;
 
     .slider_wrap {
-      width: 335px;
+      min-width: 335px;
+      max-width: 430px;
+      width: 100%;
+
       border-radius: 5px;
       background: var(--grey-80);
       overflow: hidden;
 
+      display: flex;
+      justify-content: center;
+
       .img_wrap div {
-        width: 335px;
+        width: inherit;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -22,5 +28,6 @@
   .footer_container {
     position: fixed;
     bottom: 0;
+    max-width: 428px;
   }
 }
