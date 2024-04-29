@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState, useMemo} from 'react'
 import Slider from 'react-slick'
-import {HomeHeader, Sheet, Footer, SortHeader, Feed, Dropdown, MoreOption} from 'hongsi-ui'
-import {Menus} from './const'
+import {Sheet, SortHeader, Feed, Dropdown, MoreOption} from 'hongsi-ui'
 import {
   SliderOpt,
   SampleFeedList,
@@ -40,8 +39,6 @@ function HomeView(props) {
 
   return (
     <div className="home_container">
-      <Outlet />
-      <HomeHeader />
       <Sheet message="텍스트는 <br/>최대 두 줄까지 적어주세요" />
       <SortHeader
         order={order?.label}
@@ -70,7 +67,6 @@ function HomeView(props) {
           </Feed>
         ))}
       </div>
-      <Footer menuList={Menus} />
       <Dropdown
         id="order"
         isShow={isOpenOrder}
