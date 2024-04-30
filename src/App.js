@@ -1,5 +1,5 @@
 import React from 'react'
-import {MainView, HomeView, CommentView} from './pages'
+import {MainView, HomeView, CommentView, FeedAddView} from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import './App.scss'
@@ -14,42 +14,6 @@ export default function App(props) {
           id: 'home',
           path: '',
           element: <HomeView />,
-          children: [
-            {
-              id: 'feed',
-              path: 'view/:feedId',
-              element: <div>feed view</div>,
-              children: [
-                {
-                  id: 'comment',
-                  path: 'comment',
-                  element: <CommentView />,
-                },
-                {
-                  id: 'comment-report',
-                  path: 'comment/report',
-                  element: <div>report</div>,
-                },
-              ],
-            },
-            {
-              id: 'feed-add',
-              path: 'feed-add',
-              element: <div>feed add</div>,
-              children: [
-                {
-                  id: 'feed-group-search',
-                  path: 'group-search',
-                  element: <div>feed group search</div>,
-                },
-                {
-                  id: 'feed-image-search',
-                  path: 'image-search',
-                  element: <div>feed image search</div>,
-                },
-              ],
-            },
-          ],
         },
         {
           id: 'group',
@@ -277,6 +241,45 @@ export default function App(props) {
           element: <div>password reset</div>,
         },
       ],
+    },
+    {
+      id: 'feed',
+      path: 'view/:feedId',
+      element: <div>feed view</div>,
+      children: [
+        {
+          id: 'comment',
+          path: 'comment',
+          element: <CommentView />,
+        },
+        {
+          id: 'comment-report',
+          path: 'comment/report',
+          element: <div>report</div>,
+        },
+      ],
+    },
+    {
+      id: 'feed-add',
+      path: 'add',
+      element: <FeedAddView />,
+      children: [
+        {
+          id: 'feed-group-search',
+          path: 'group-search',
+          element: <div>feed group search</div>,
+        },
+        {
+          id: 'feed-image-search',
+          path: 'image-search',
+          element: <div>feed image search</div>,
+        },
+      ],
+    },
+    {
+      id: 'feed-search',
+      path: 'search',
+      element: <div>feed search</div>,
     },
   ])
 

@@ -33,7 +33,7 @@ function MainView(props) {
 
   return (
     <div className="main_container">
-      <HomeHeader />
+      <HomeHeader editUrl="/add" searchUrl="/search" />
       <Outlet />
       <Footer menuList={nav} />
     </div>
