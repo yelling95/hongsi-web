@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Outlet, useLocation, useParams, useNavigate} from 'react-router-dom'
-import {WriteHeader, Icon, Dropdown} from 'hongsi-ui'
+import {WriteHeader, Icon, Dropdown, TextField} from 'hongsi-ui'
 import {SampleCategoryList} from './structure'
 import {map} from 'lodash-es'
 
@@ -10,6 +10,7 @@ function AddView(props) {
   const [categoryOptions, setCategoryOptions] = useState(SampleCategoryList())
   const [isOpenCategory, setOpenCategory] = useState(false)
   const [category, setCategory] = useState(null)
+  const [searchText, setSearchText] = useState('')
 
   return (
     <div className="feed_add_container">
@@ -19,7 +20,13 @@ function AddView(props) {
         <label>{category ? category.label : '주제를 선택해주세요'}</label>
         <Icon id="Dropdown" width={20} height={20} color="#393939" />
       </div>
-
+      <TextField
+        id="searchText"
+        type="post"
+        value={searchText}
+        onChange={({id, value}) => setSearchText(value)}
+        placeholder="제목을 입력해주세요."
+      />
       <Dropdown
         id="category"
         isShow={isOpenCategory}
