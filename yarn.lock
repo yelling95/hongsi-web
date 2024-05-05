@@ -1296,9 +1296,9 @@
     "@floating-ui/utils" "^0.2.0"
 
 "@floating-ui/dom@^1.0.0":
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.6.4.tgz#3a9d1f3b7ccdab89a4ca05713acc6204b1f67a29"
-  integrity sha512-0G8R+zOvQsAG1pg2Q99P21jiqxqGBW1iRe/iXHsBRBxnpXKFI8QwbB4x5KmYLggNO5m34IQgOIu9SCRfR/WWiQ==
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.6.5.tgz#323f065c003f1d3ecf0ff16d2c2c4d38979f4cb9"
+  integrity sha512-Nsdud2X65Dz+1RHjAIP0t8z5e2ff/IRbei6BqFrl1urT8sDVzM1HMQ+R0XcU5ceRfyO3I6ayeqIfh+6Wb8LGTw==
   dependencies:
     "@floating-ui/core" "^1.0.0"
     "@floating-ui/utils" "^0.2.0"
@@ -4125,10 +4125,10 @@ hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   dependencies:
     react-is "^16.7.0"
 
-hongsi-ui@^1.0.28:
-  version "1.0.28"
-  resolved "https://registry.yarnpkg.com/hongsi-ui/-/hongsi-ui-1.0.28.tgz#25b00164106d3230ca55d06df5886b8f98746ac3"
-  integrity sha512-DnsB9ERTOPwVsdC0Awv4OfSuJ2GQUW2vi3r+7c4CFYjn0v5HNVeVu+LrKgbrS0d/EHQraJjru4X1G1AuRv1pdA==
+hongsi-ui@^1.0.32:
+  version "1.0.32"
+  resolved "https://registry.yarnpkg.com/hongsi-ui/-/hongsi-ui-1.0.32.tgz#251cfc5040b2794e32e7eeadec1185c2ce64f904"
+  integrity sha512-dPfl8CT07dFIPN4X22kHE+FU/dm1InfUFgXh8oixRv3LIl4SHrGbyiEra5AeyyhnlLoYj43MIUWwUiHYR6Pn0w==
   dependencies:
     "@storybook/addon-docs" "^7.5.0"
     "@storybook/addon-mdx-gfm" "^7.5.0"
