@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Outlet, useLocation, useParams, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import {WriteHeader, Icon, Dropdown, TextField, TextArea, IconButton} from 'hongsi-ui'
 import {SampleCategoryList} from './structure'
 import {map} from 'lodash-es'
@@ -7,6 +7,8 @@ import {map} from 'lodash-es'
 import './AddView.scss'
 
 function AddView(props) {
+  const navigate = useNavigate()
+
   const [categoryOptions, setCategoryOptions] = useState(SampleCategoryList())
   const [isOpenCategory, setOpenCategory] = useState(false)
   const [category, setCategory] = useState(null)
@@ -15,9 +17,14 @@ function AddView(props) {
 
   return (
     <div className="feed_add_container">
-      <Outlet />
+      <WriteHeader
+        goBack={() => {
+          navigate(-1)
+        }}
+        writeUrl="/"
+        title="글 작성"
+      />
       <div className="add_container">
-        <WriteHeader goBack={() => {}} writeUrl="/" title="글 작성" />
         <div className="write_wrap">
           <div className="category_selector" onClick={() => setOpenCategory(true)}>
             <label>{category ? category.label : '주제를 선택해주세요'}</label>
@@ -36,14 +43,14 @@ function AddView(props) {
             onChange={({id, value}) => setContetns(value)}
           />
         </div>
-        <div className="bottom_choise_wrap">
-          <IconButton type="Photo" color="#393939">
-            사진
-          </IconButton>
-          <IconButton type="Group" color="#393939">
-            모임
-          </IconButton>
-        </div>
+      </div>
+      <div className="bottom_choise_wrap">
+        <IconButton type="Photo" color="#393939" onClick={() => navigate('/feed/search/image')}>
+          사진
+        </IconButton>
+        <IconButton type="Group" color="#393939" onClick={() => navigate('/feed/search/group')}>
+          모임
+        </IconButton>
       </div>
       <Dropdown
         id="category"

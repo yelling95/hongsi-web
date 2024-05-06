@@ -1,15 +1,17 @@
 .feed_add_container {
+  .write_header_container {
+    padding: 0 20px;
+  }
   .add_container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+    height: calc(100vh - 95px);
     padding: 0 20px;
 
     .write_wrap {
       display: flex;
       flex-direction: column;
-      height: calc(100% - 95px);
+      height: 100%;
       
       .category_selector {
         display: flex;
@@ -30,7 +32,7 @@
       }
 
       .textarea_container {
-        padding-bottom: 20px;
+        padding: 20px 0;
         height: 100%;
 
         .textarea_wrap {
@@ -38,21 +40,22 @@
         }
       }
     }
+  }
 
-    .bottom_choise_wrap {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 20px;
-      height: 48px;
-      border-top: 1px solid var(--bottom-choise-line);
-  
-      button {
-        font-size: 12px;
-        font-weight: 500;
-        align-items: end;
-        line-height: 17px;
-      }
+  .bottom_choise_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    height: 48px;
+    padding: 0 20px;
+    border-top: 1px solid var(--bottom-choise-line);
+
+    button {
+      font-size: 12px;
+      font-weight: 500;
+      align-items: end;
+      line-height: 17px;
     }
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {MainView, HomeView, CommentView, FeedAddView} from './pages'
+import {MainView, HomeView, CommentView, FeedAddView, GroupSearchView} from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import './App.scss'
@@ -244,7 +244,7 @@ export default function App(props) {
     },
     {
       id: 'feed',
-      path: 'view/:feedId',
+      path: 'feed/:feedId',
       element: <div>feed view</div>,
       children: [
         {
@@ -261,20 +261,18 @@ export default function App(props) {
     },
     {
       id: 'feed-add',
-      path: 'add',
+      path: 'feed',
       element: <FeedAddView />,
-      children: [
-        {
-          id: 'feed-group-search',
-          path: 'group-search',
-          element: <div>feed group search</div>,
-        },
-        {
-          id: 'feed-image-search',
-          path: 'image-search',
-          element: <div>feed image search</div>,
-        },
-      ],
+    },
+    {
+      id: 'feed-group-search',
+      path: 'feed/search/group',
+      element: <GroupSearchView />,
+    },
+    {
+      id: 'feed-image-search',
+      path: 'feed/search/image',
+      element: <div>feed image search</div>,
     },
     {
       id: 'feed-search',
