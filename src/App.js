@@ -1,5 +1,12 @@
 import React from 'react'
-import {MainView, HomeView, CommentView, FeedAddView, GroupSearchView} from './pages'
+import {
+  MainView,
+  HomeView,
+  CommentView,
+  FeedAddView,
+  GroupSearchView,
+  ImageSearchView,
+} from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import './App.scss'
@@ -272,7 +279,7 @@ export default function App(props) {
     {
       id: 'feed-image-search',
       path: 'feed/search/image',
-      element: <div>feed image search</div>,
+      element: <ImageSearchView />,
     },
     {
       id: 'feed-search',

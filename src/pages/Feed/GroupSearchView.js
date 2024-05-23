@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import {SearchHeader, Sheet, GatherListItem} from 'hongsi-ui'
+import {SearchHeader, Sheet, GatherListItem, Button} from 'hongsi-ui'
 
 import './GroupSearchView.scss'
 
@@ -15,11 +15,21 @@ function GroupSearchView(props) {
             navigate(-1)
           }}
         />
-        <Sheet message="모임 홍보나 모임 후기 작성을 원하시면 모임을 선택해 주세요" />
+        <Sheet message="내가 찾는 모임을 검색해 보세요" />
         <div className="scroll_wrap">
           <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
           <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
           <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
+          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
+          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
+          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
+          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
+          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
+        </div>
+        <div className="button_wrap">
+          <Button type="primary" size="lg" onClick={() => {}}>
+            모임 추가하기
+          </Button>
         </div>
       </div>
     </div>

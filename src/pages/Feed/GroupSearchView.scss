@@ -1,8 +1,31 @@
 .group_search_container {
+  height: 100vh;
+
   .search_container {
     .search_header_container {
       padding: 0 20px;
       height: 47px;
+    }
+  }
+
+  .scroll_wrap {
+    height: calc(100vh - 207px);
+    overflow-y: auto;
+
+    .gather_container {
+      max-width: 100%;
+    }
+  }
+
+  .button_wrap {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .button_container {
+      max-width: 100%;
     }
   }
 }
