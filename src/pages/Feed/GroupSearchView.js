@@ -6,14 +6,18 @@ import './GroupSearchView.scss'
 
 function GroupSearchView(props) {
   const navigate = useNavigate()
+  const [searchValue, setSearchValue] = useState('')
 
   return (
     <div className="group_search_container">
       <div className="search_container">
         <SearchHeader
+          placeholder="모임 검색"
+          value={searchValue}
           goBack={() => {
             navigate(-1)
           }}
+          onChange={({value}) => setSearchValue(value)}
         />
         <Sheet message="내가 찾는 모임을 검색해 보세요" />
         <div className="scroll_wrap">

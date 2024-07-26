@@ -21,7 +21,9 @@ function AddView(props) {
         goBack={() => {
           navigate(-1)
         }}
-        writeUrl="/"
+        onSave={() => {
+          alert('저장')
+        }}
         title="글 작성"
       />
       <div className="add_container">

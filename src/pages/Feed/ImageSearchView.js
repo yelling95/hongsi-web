@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import {WriteHeader, Sheet, GatherListItem, Button} from 'hongsi-ui'
+import {GalleryHeader, Sheet, GatherListItem, Button} from 'hongsi-ui'
 
 import './ImageSearchView.scss'
 
@@ -10,12 +10,16 @@ function ImageSearchView(props) {
   return (
     <div className="image_search_container">
       <div className="search_container">
-        <WriteHeader
+        <GalleryHeader
+          album="최근 항목"
+          open={false}
           goBack={() => {
             navigate(-1)
           }}
-          writeUrl="/"
-          title="글 작성"
+          onSelectImage={() => {
+            alert('완료!')
+          }}
+          onChangeAlbum={() => {}}
         />
         <div className="scroll_wrap"></div>
       </div>
