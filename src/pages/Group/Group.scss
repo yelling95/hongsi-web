@@ -1,0 +1,21 @@
+.group_container {
+  .tab_group_container {
+    height: 60px;
+    padding: 0 20px;
+  }
+  .tag_wrap {
+    display: flex;
+    gap: 8px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .scroll_wrap {
+    height: calc(100vh - 207px);
+    overflow-y: auto;
+
+    .gather_container {
+      max-width: 100%;
+    }
+  }
+}

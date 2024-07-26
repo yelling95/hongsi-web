@@ -6,6 +6,8 @@ import {
   FeedAddView,
   GroupSearchView,
   ImageSearchView,
+  FeedSearchView,
+  GroupView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -25,7 +27,7 @@ export default function App(props) {
         {
           id: 'group',
           path: 'group',
-          element: <div>group main</div>,
+          element: <GroupView />,
           children: [
             {
               id: 'group-member',
@@ -284,7 +286,7 @@ export default function App(props) {
     {
       id: 'feed-search',
       path: 'search',
-      element: <div>feed search</div>,
+      element: <FeedSearchView />,
     },
   ])
 
