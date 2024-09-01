@@ -8,6 +8,8 @@ import {
   ImageSearchView,
   FeedSearchView,
   GroupView,
+  LoginView,
+  SimpleLoginView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -180,6 +182,26 @@ export default function App(props) {
               element: <div>partnership</div>,
             },
           ],
+        },
+      ],
+    },
+    {
+      path: 'login',
+      children: [
+        {
+          id: 'login',
+          path: '',
+          element: <LoginView />,
+        },
+        {
+          id: 'login-simple-01',
+          path: 'simple/01',
+          element: <SimpleLoginView type="01" />,
+        },
+        {
+          id: 'login-simple-02',
+          path: 'simple/02',
+          element: <SimpleLoginView type="02" />,
         },
       ],
     },
