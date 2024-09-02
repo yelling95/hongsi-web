@@ -45,7 +45,7 @@ function Login(props) {
 
   return (
     <div className="login_container">
-      <BasicHeader title="로그인" />
+      <BasicHeader title="로그인" goBack={() => navigate(-1)} />
       <div className="login_input_wrap">
         <div>
           <TextField

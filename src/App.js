@@ -243,26 +243,6 @@ export default function App(props) {
       ],
     },
     {
-      path: 'signin',
-      children: [
-        {
-          id: 'signin-01',
-          path: '01',
-          element: <div>signin 01</div>,
-        },
-        {
-          id: 'signin-02',
-          path: '02',
-          element: <div>signin 02</div>,
-        },
-        {
-          id: 'signin-default',
-          path: 'default',
-          element: <div>signin default</div>,
-        },
-      ],
-    },
-    {
       id: 'password',
       path: 'password',
       children: [
