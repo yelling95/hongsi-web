@@ -52,6 +52,11 @@ module.exports = (env, argv) => {
           exclude: /node_modules/,
           use: ['file-loader?name=[name].[ext]'], // 이미지 파일을 모듈로 사용할 수 있도록 변환하는 역할을 하는 로더이다.
         },
+        {
+          test: /\.(otf|ttf|eot|svg|woff?)$/,
+          exclude: /node_modules/,
+          use: ['url-loader?name=[name].[ext]'],
+        },
       ],
     },
     plugins: [

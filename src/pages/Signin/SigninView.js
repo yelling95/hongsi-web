@@ -3,11 +3,11 @@ import className from 'classnames'
 import {useNavigate} from 'react-router-dom'
 import {map} from 'lodash-es'
 import {BasicHeader, TextField} from 'hongsi-ui'
-import {EmailDomainList} from './structure'
+import {EmailDomainList} from './const'
 
-import './LoginView.scss'
+import './SigninView.scss'
 
-function Login(props) {
+function Signin(props) {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -44,7 +44,7 @@ function Login(props) {
   }
 
   return (
-    <div className="login_container">
+    <div className="signin_container">
       <BasicHeader title="로그인" goBack={() => navigate(-1)} />
       <div className="login_input_wrap">
         <div>
@@ -90,4 +90,4 @@ function Login(props) {
   )
 }
 
-export default Login
+export default Signin

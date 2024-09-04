@@ -1,0 +1,59 @@
+.signin_exist_container {
+  height: 100vh;
+  padding: 22px;
+  position: relative;
+
+  .contents_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .comments_wrap {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    text-align: center;
+    gap: 27px;
+
+    label.email {
+      font-size: 22px;
+      line-height: 30px;
+      font-weight: 600;
+    }
+
+    label.comments {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 500;
+    }
+  }
+
+  .button_wrap {
+    width: 100%;
+    margin-top: 153px;
+    
+    button {
+      max-width: 100%;
+    }
+  }
+
+  .sub_button_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 17px;
+      color: var(--black);
+      border: none;
+      background: var(--white);
+    }
+  }
+
+}

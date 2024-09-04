@@ -4,14 +4,14 @@ import TextLogo from '../../assets/images/logo_text.png'
 import {useNavigate} from 'react-router-dom'
 import {Button, VendorButton} from 'hongsi-ui'
 
-import './SimpleLoginView.scss'
+import './SimpleSigninView.scss'
 import classNames from 'classnames'
 
 function SimpleLogin(props) {
   const {type} = props
   const navigate = useNavigate()
   return (
-    <div className="simple_login_container">
+    <div className="simple_signin_container">
       <div className="contents_wrap">
         <div className="logo_wrap">
           <img src={Logo} alt="홍시" />

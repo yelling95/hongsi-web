@@ -1,6 +1,10 @@
-.login_container {
+.signin_container {
   height: 100vh;
   position: relative;
+  
+  .basic_header_container {
+    padding: 0 20px;
+  }
 
   .login_input_wrap {
     display: flex;

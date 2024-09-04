@@ -8,8 +8,11 @@ import {
   ImageSearchView,
   FeedSearchView,
   GroupView,
-  LoginView,
-  SimpleLoginView,
+  SigninView,
+  SimpleSigninView,
+  SimpleSigninExistView,
+  SignupView,
+  SignupEmailView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -186,22 +189,32 @@ export default function App(props) {
       ],
     },
     {
-      path: 'login',
+      path: 'signin',
       children: [
         {
-          id: 'login',
+          id: 'signin',
           path: '',
-          element: <LoginView />,
+          element: <SigninView />,
         },
         {
-          id: 'login-simple-01',
+          id: 'signin-simple-01',
           path: 'simple/01',
-          element: <SimpleLoginView type="01" />,
+          element: <SimpleSigninView type="01" />,
         },
         {
-          id: 'login-simple-02',
+          id: 'signin-simple-02',
           path: 'simple/02',
-          element: <SimpleLoginView type="02" />,
+          element: <SimpleSigninView type="02" />,
+        },
+        {
+          id: 'signin-exist-kakao',
+          path: 'exist/kakao',
+          element: <SimpleSigninExistView vendor="kakao" />,
+        },
+        {
+          id: 'signin-exist-naver',
+          path: 'exist/naver',
+          element: <SimpleSigninExistView vendor="naver" />,
         },
       ],
     },
@@ -211,12 +224,12 @@ export default function App(props) {
         {
           id: 'signup',
           path: '',
-          element: <div>signup main</div>,
+          element: <SignupView />,
           children: [
             {
               id: 'signup-email',
               path: 'email',
-              element: <div>signup email</div>,
+              element: <SignupEmailView />,
             },
             {
               id: 'signup-password',
