@@ -78,7 +78,7 @@ function Signin(props) {
         </div>
       </div>
       <div className="button_wrap">
-        <button onClick={() => navigate('/signup')}>회원가입</button>
+        <button onClick={() => navigate('/signup/email')}>회원가입</button>
         <button onClick={() => navigate('/password/reset')}>비밀번호 재설정</button>
       </div>
       <div className="fixed_bottom_wrap">

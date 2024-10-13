@@ -2,15 +2,15 @@ import React, {useState, useMemo} from 'react'
 import classNames from 'classnames'
 import {map} from 'lodash-es'
 import {TextField} from 'hongsi-ui'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useLocation} from 'react-router-dom'
 import {EmailDomainList} from './const'
 
 import './SignupView.scss'
 
-function PasswordView({email}) {
+function PasswordView() {
   const navigate = useNavigate()
-
-  console.log(email)
+  const location = useLocation()
+  const email = location.state?.email
 
   const [password, setPassword] = useState('')
   const [passwordConfirm, setPasswordConfirm] = useState('')
@@ -56,6 +56,7 @@ function PasswordView({email}) {
       </div>
       <div className="input_wrap">
         <TextField
+          type="password"
           value={password}
           placeholder="비밀번호 입력"
           isState={valid?.password?.state}
@@ -65,6 +66,7 @@ function PasswordView({email}) {
           }}
         />
         <TextField
+          type="password"
           value={passwordConfirm}
           placeholder="비밀번호 확인(한번 더 입력)"
           isState={valid?.passwordConfirm?.state}

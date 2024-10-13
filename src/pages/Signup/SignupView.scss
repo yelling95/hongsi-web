@@ -26,6 +26,24 @@
       line-height: 30px;
     }
 
+    .desc_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      label {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 17px;
+      }
+    }
+
+    .input_wrap {
+      .input_container {
+        margin-bottom: 40px;
+      }
+    }
+
     .fixed_bottom_wrap {
       position: absolute;
       bottom: 0;

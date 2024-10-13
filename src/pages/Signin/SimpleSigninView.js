@@ -31,7 +31,7 @@ function SimpleLogin(props) {
         </div>
         <div className="login_wrap">
           <label>
-            이미 계정이 있나요?<em onClick={() => navigate('/login')}>{` 로그인`}</em>
+            이미 계정이 있나요?<em onClick={() => navigate('/signin')}>{` 로그인`}</em>
           </label>
         </div>
       </div>

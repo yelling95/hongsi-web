@@ -27,7 +27,7 @@ function ExistView(props) {
           <VendorButton type={vendor}>{`${vendorInfo.name} 계정 연동하기`}</VendorButton>
         </div>
         <div className="sub_button_wrap">
-          <button onClick={() => navigate('/signup')}>신규회원으로 시작하기</button>
+          <button onClick={() => navigate('/signup/email')}>신규회원으로 시작하기</button>
         </div>
       </div>
     </div>

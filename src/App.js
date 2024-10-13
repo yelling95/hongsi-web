@@ -13,6 +13,7 @@ import {
   SimpleSigninExistView,
   SignupView,
   SignupEmailView,
+  SignupPasswordView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -234,7 +235,7 @@ export default function App(props) {
             {
               id: 'signup-password',
               path: 'password',
-              element: <div>signup password</div>,
+              element: <SignupPasswordView />,
             },
             {
               id: 'signup-phone',
