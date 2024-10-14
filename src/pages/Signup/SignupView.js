@@ -4,7 +4,7 @@ import {BasicHeader} from 'hongsi-ui'
 import {Outlet} from 'react-router-dom'
 import {useNavigate} from 'react-router-dom'
 
-import './SignupView.scss'
+import './Signup.scss'
 
 function Signup(props) {
   const navigate = useNavigate()

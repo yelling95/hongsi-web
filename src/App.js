@@ -16,6 +16,7 @@ import {
   SignupPasswordView,
   SignupPhoneView,
   SignupNicknameView,
+  ResetPasswordView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -247,7 +248,7 @@ export default function App(props) {
             {
               id: 'signup-nickname',
               path: 'nickname',
-              element: <SignupNicknameView />,
+              element: <SignupNicknameView type="01" />,
             },
           ],
         },
@@ -265,7 +266,7 @@ export default function App(props) {
         {
           id: 'password-reset',
           path: 'reset',
-          element: <div>password reset</div>,
+          element: <ResetPasswordView />,
         },
       ],
     },

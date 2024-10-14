@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import {TextField} from 'hongsi-ui'
 import {useNavigate, useLocation} from 'react-router-dom'
 
-import './SignupView.scss'
+import './Signup.scss'
 
 function PasswordView() {
   const navigate = useNavigate()

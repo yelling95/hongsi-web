@@ -5,7 +5,7 @@ import {TextField} from 'hongsi-ui'
 import {useNavigate} from 'react-router-dom'
 import {EmailDomainList} from './const'
 
-import './SignupView.scss'
+import './Signup.scss'
 
 function EmailView(props) {
   const navigate = useNavigate()

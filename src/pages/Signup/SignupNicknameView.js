@@ -3,11 +3,13 @@ import classNames from 'classnames'
 import {TextField, Confirm} from 'hongsi-ui'
 import {useNavigate, useLocation} from 'react-router-dom'
 
-import './SignupView.scss'
+import CompleteIcon from '../../assets/images/complete.png'
+
+import './Signup.scss'
 
 const ALREADY_USED_NICKNAME = '잘익은홍시'
 
-function NicknameView() {
+function NicknameView({type = '01'}) {
   const navigate = useNavigate()
   const location = useLocation()
   const email = location.state?.email
@@ -62,13 +64,28 @@ function NicknameView() {
         />
       </div>
 
-      <Confirm isShow={showFinMessage} isShowDimm={true} close={() => {}}>
-        <div>
-          {nickname}님 만나서 반가워요!
-          <br />
-          홍시에서 즐거운 경험을 쌓아보세요.
-        </div>
-      </Confirm>
+      {type === '01' && (
+        <Confirm isShow={showFinMessage} isShowDimm={true} close={() => {}}>
+          <div className="sinup_confirm_01">
+            {nickname}님 만나서 반가워요!
+            <br />
+            홍시에서 즐거운 경험을 쌓아보세요.
+          </div>
+        </Confirm>
+      )}
+
+      {type === '02' && (
+        <Confirm isShow={showFinMessage} isShowDimm={true} close={() => {}}>
+          <div className="sinup_confirm_02">
+            <img src={CompleteIcon} alt="회원가입 완료" width="52px" height="52px" />
+            <h2>회원가입 완료</h2>
+            <label>
+              지금 나와 맞는 사람들과
+              <br /> 즐거운 시간을 가져보세요!
+            </label>
+          </div>
+        </Confirm>
+      )}
 
       <div className="fixed_bottom_wrap">
         <button className={classNames(isDone ? 'active' : '')} onClick={() => handleNext()}>

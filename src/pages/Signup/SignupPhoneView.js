@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import {TextField, Snackbar, Icon, Confirm} from 'hongsi-ui'
 import {useNavigate, useLocation} from 'react-router-dom'
 
-import './SignupView.scss'
+import './Signup.scss'
 
 const STEP = {
   FILL: 1,

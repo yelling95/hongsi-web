@@ -71,6 +71,23 @@
       width: calc(100% - 40px);
     }
 
+    .sinup_confirm_02 {
+      img {
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      label {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 500;
+      }
+    }
+
     .fixed_bottom_wrap {
       position: absolute;
       bottom: 0;
