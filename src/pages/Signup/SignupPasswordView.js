@@ -1,9 +1,7 @@
 import React, {useState, useMemo} from 'react'
 import classNames from 'classnames'
-import {map} from 'lodash-es'
 import {TextField} from 'hongsi-ui'
 import {useNavigate, useLocation} from 'react-router-dom'
-import {EmailDomainList} from './const'
 
 import './SignupView.scss'
 

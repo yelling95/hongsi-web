@@ -14,6 +14,8 @@ import {
   SignupView,
   SignupEmailView,
   SignupPasswordView,
+  SignupPhoneView,
+  SignupNicknameView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -240,12 +242,12 @@ export default function App(props) {
             {
               id: 'signup-phone',
               path: 'phone',
-              element: <div>signup phone</div>,
+              element: <SignupPhoneView />,
             },
             {
               id: 'signup-nickname',
               path: 'nickname',
-              element: <div>signup nickname</div>,
+              element: <SignupNicknameView />,
             },
           ],
         },
