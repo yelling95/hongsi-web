@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+import {SampleGroupList} from './const'
+import {map} from 'lodash-es'
 import {SearchHeader, Sheet, GatherListItem, Button} from 'hongsi-ui'
 
 import './GroupSearchView.scss'
@@ -7,6 +9,7 @@ import './GroupSearchView.scss'
 function GroupSearchView(props) {
   const navigate = useNavigate()
   const [searchValue, setSearchValue] = useState('')
+  const [selectedItem, setSelectedItem] = useState(null)
 
   return (
     <div className="group_search_container">
@@ -21,14 +24,17 @@ function GroupSearchView(props) {
         />
         <Sheet message="내가 찾는 모임을 검색해 보세요" />
         <div className="scroll_wrap">
-          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
-          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
-          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
-          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
-          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
-          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
-          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
-          <GatherListItem onClick={() => {}} onClickLike={() => {}} size="lg" />
+          {map(SampleGroupList, (group) => (
+            <GatherListItem
+              key={`group-search-${group.id}`}
+              selected={selectedItem?.id === group.id}
+              onClick={() => setSelectedItem(group)}
+              onClickLike={() => {
+                group.like = !group.like
+              }}
+              {...group}
+            />
+          ))}
         </div>
         <div className="button_wrap">
           <Button type="primary" size="lg" onClick={() => {}}>
