@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {useNavigate} from 'react-router-dom'
+import React, {useState, useEffect} from 'react'
+import {useNavigate, useLocation} from 'react-router-dom'
 import {SampleGroupList} from './const'
 import {map} from 'lodash-es'
 import {SearchHeader, Sheet, GatherListItem, Button} from 'hongsi-ui'
@@ -8,6 +8,7 @@ import './GroupSearchView.scss'
 
 function GroupSearchView(props) {
   const navigate = useNavigate()
+  const location = useLocation()
   const [searchValue, setSearchValue] = useState('')
   const [selectedItem, setSelectedItem] = useState(null)
 
@@ -37,7 +38,17 @@ function GroupSearchView(props) {
           ))}
         </div>
         <div className="button_wrap">
-          <Button type="primary" size="lg" onClick={() => {}}>
+          <Button
+            type="primary"
+            size="lg"
+            onClick={() => {
+              navigate('/feed', {
+                state: {
+                  ...location.state,
+                  group: selectedItem,
+                },
+              })
+            }}>
             모임 추가하기
           </Button>
         </div>

@@ -40,6 +40,50 @@
         }
       }
     }
+
+    .extra_wrap {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      gap: 20px;
+
+      .slider_wrap {
+        border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+
+        .img_wrap {
+          position: relative;
+          .control {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+            .delete {
+              position: absolute;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              background-color: var(--black);
+              top: 15px;
+              right: 15px;
+
+              svg {
+                width: 14px;
+              }
+            }
+          }
+          .img {
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
   }
 
   .bottom_choise_wrap {
