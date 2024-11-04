@@ -4288,10 +4288,10 @@ hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   dependencies:
     react-is "^16.7.0"
 
-hongsi-ui@^1.0.66:
-  version "1.0.66"
-  resolved "https://registry.yarnpkg.com/hongsi-ui/-/hongsi-ui-1.0.66.tgz#10b67c22eb76cd6cff9c6fba2bd15a6d2c7635b8"
-  integrity sha512-rt9/0sCK0icAzxyzN9z8mUd67etgReGAL+B1JmQ0qRraprBWOpczgrRch5nU7a+ZEdxcBAjQ0HKXWbPVzKbTyg==
+hongsi-ui@^1.0.68:
+  version "1.0.68"
+  resolved "https://registry.yarnpkg.com/hongsi-ui/-/hongsi-ui-1.0.68.tgz#c5d01f29f4d45adfd98d0ecacd2fa47af890ef40"
+  integrity sha512-B3X4Lg1IZ4mbx5gdUMnuDtpcHW/BFJsQ4eNkTWuCC8kJL051CouxgJVHoy0EHOemA3ebj2bmPV0tFg/MAw0zxQ==
   dependencies:
     "@storybook/addon-docs" "^7.5.0"
     "@storybook/addon-mdx-gfm" "^7.5.0"

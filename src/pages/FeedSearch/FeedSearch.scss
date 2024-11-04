@@ -1,3 +1,74 @@
 .feed_search_container {
   height: 100vh;
+
+  .search_container {
+    padding: 5px 20px 8px 20px;
+  }
+
+  .section {
+    .title {
+      height: 45px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      label {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14px;
+        color: var(--black);
+      }
+
+      .text_button_container {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 18px;
+        color: var(--grey-80);
+      }
+    }
+
+    .lastest_wrap {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+
+      .keyword {
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+          font-weight: 700;
+          font-size: 15px;
+          color: var(--black);
+        }
+      }
+    }
+
+    .rank_wrap {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+
+      .keyword {
+        height: 42px;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 15px;
+        
+        label {
+          color: var(--black);
+        }
+
+        em {
+          width: 30px;
+          font-style: normal;
+          color: var(--primary-orange);
+        }
+      }
+    }
+  }
 }
