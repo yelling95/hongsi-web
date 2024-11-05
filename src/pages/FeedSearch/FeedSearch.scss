@@ -5,7 +5,14 @@
     padding: 5px 20px 8px 20px;
   }
 
-  .section {
+  .section_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: calc(100% - 60px);
+  }
+
+  .section {    
     .title {
       height: 45px;
       padding: 0 20px;
@@ -22,7 +29,7 @@
 
       .text_button_container {
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 18px;
         color: var(--grey-80);
       }
@@ -43,6 +50,11 @@
           font-weight: 700;
           font-size: 15px;
           color: var(--black);
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
         }
       }
     }
@@ -69,6 +81,22 @@
           color: var(--primary-orange);
         }
       }
+    }
+  }
+
+  .result_wrap {
+    height: calc(100% - 60px);
+
+    .empty {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      color: var(--grey-60);
+      text-align: center;
     }
   }
 }
