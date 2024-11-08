@@ -3036,9 +3036,9 @@ caniuse-lite@^1.0.30001587:
   integrity sha512-lFgnZ07UhaCcsSZgWW0K5j4e69dK1u/ltrL9lTUiFOwNHs12S3UMIEYgBV0Z6C6hRDev7iRnMzzYmKabYdXF9g==
 
 caniuse-lite@^1.0.30001669:
-  version "1.0.30001678"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001678.tgz#b930b04cd0b295136405634aa32ad540d7eeb71e"
-  integrity sha512-RR+4U/05gNtps58PEBDZcPWTgEO2MBeoPZ96aQcjmfkBWRIDfN451fW2qyDA9/+HohLLIL5GqiMwA+IB1pWarw==
+  version "1.0.30001679"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001679.tgz#18c573b72f72ba70822194f6c39e7888597f9e32"
+  integrity sha512-j2YqID/YwpLnKzCmBOS4tlZdWprXm3ZmQLBH9ZBXFOhoxLA46fwyBvx6toCBWBmnuwUY/qB3kEU6gFx8qgCroA==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -4297,10 +4297,10 @@ hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   dependencies:
     react-is "^16.7.0"
 
-hongsi-ui@^1.0.80:
-  version "1.0.80"
-  resolved "https://registry.yarnpkg.com/hongsi-ui/-/hongsi-ui-1.0.80.tgz#43edc84bd55889d2c906b77981610bcd5769d4ec"
-  integrity sha512-Aar97L7hEoA71AwHMBkw7PUh8eYufxt6NTG2Wu/ZJzWbn0cnKc/p5eJ+r3cfRIvfhOdRjPn5cVrfrp3iV0aaYA==
+hongsi-ui@^1.0.87:
+  version "1.0.87"
+  resolved "https://registry.yarnpkg.com/hongsi-ui/-/hongsi-ui-1.0.87.tgz#79ad1c6e8861407449aace9f69cad7e97eb8c8cd"
+  integrity sha512-Q21vq+Fw5/Pmci+6afZX4UX9rddvgW5IfkADOtK0LeopBw9k/ejR4GEyQZMElkeawu5tQHmlN+X5KaIMBjDSYA==
   dependencies:
     "@storybook/addon-docs" "^7.5.0"
     "@storybook/addon-mdx-gfm" "^7.5.0"

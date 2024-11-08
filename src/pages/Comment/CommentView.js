@@ -40,7 +40,6 @@ function CommentView(props) {
   }
 
   const Comments = useMemo(() => {
-    console.log(comments)
     if (comments.length === 0) {
       return (
         <div className="empty_wrap">

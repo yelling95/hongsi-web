@@ -1,0 +1,31 @@
+.chatting_view_container {
+  height: 100vh;
+  position: relative;
+
+  .chatting_header_container {
+    padding: 0 20px;
+  }
+
+  .message_wrap {
+    padding: 20px;
+    .date {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 17px;
+      text-align: center;
+    }
+
+    .part {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .input_wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

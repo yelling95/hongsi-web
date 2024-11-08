@@ -87,7 +87,7 @@
   .result_wrap {
     height: calc(100% - 60px);
 
-    .empty {
+    .empty_wrap {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -97,6 +97,7 @@
       line-height: 25px;
       color: var(--grey-60);
       text-align: center;
+      background-color: var(--grey-10);
     }
   }
 }

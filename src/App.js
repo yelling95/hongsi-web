@@ -18,6 +18,8 @@ import {
   SignupPhoneView,
   SignupNicknameView,
   ResetPasswordView,
+  ChattingListView,
+  ChattingView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -81,34 +83,7 @@ export default function App(props) {
         {
           id: 'chat',
           path: 'chat',
-          element: <div>chat main</div>,
-          children: [
-            {
-              id: 'chat-o2o',
-              path: 'o2o',
-              element: <div>chat one to one</div>,
-            },
-            {
-              id: 'chat-group',
-              path: 'group',
-              element: <div>chat group</div>,
-            },
-            {
-              id: 'chat-view',
-              path: 'view',
-              element: <div>chat view</div>,
-            },
-            {
-              id: 'chat-report',
-              path: 'report',
-              element: <div>chat report</div>,
-            },
-            {
-              id: 'chat-search',
-              path: 'search',
-              element: <div>chat search</div>,
-            },
-          ],
+          element: <ChattingListView />,
         },
         {
           id: 'profile',
@@ -307,6 +282,21 @@ export default function App(props) {
       id: 'feed-search',
       path: 'search',
       element: <FeedSearchView />,
+    },
+    {
+      id: 'chat-view',
+      path: 'chat/:chatId',
+      element: <ChattingView />,
+    },
+    {
+      id: 'chat-report',
+      path: 'chat/report',
+      element: <div>chat report</div>,
+    },
+    {
+      id: 'chat-search',
+      path: 'chat/search',
+      element: <div>chat search</div>,
     },
   ])
 

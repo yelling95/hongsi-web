@@ -57,7 +57,7 @@ function FeedSearchView(props) {
 
     if (resultList.length === 0) {
       return (
-        <div className="empty">
+        <div className="empty_wrap">
           찾으시는 내용이 맞나요?
           <br />
           검색결과가 없습니다.
