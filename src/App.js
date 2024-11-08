@@ -4,6 +4,7 @@ import {
   HomeView,
   CommentView,
   FeedAddView,
+  FeedView,
   GroupSearchView,
   ImageSearchView,
   FeedSearchView,
@@ -273,7 +274,7 @@ export default function App(props) {
     {
       id: 'feed',
       path: 'feed/:feedId',
-      element: <div>feed view</div>,
+      element: <FeedView />,
       children: [
         {
           id: 'comment',

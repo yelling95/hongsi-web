@@ -1,13 +1,8 @@
 import React, {useState, useMemo} from 'react'
 import Slider from 'react-slick'
 import {Sheet, SortHeader, Feed, Dropdown, MoreOption} from 'hongsi-ui'
-import {
-  SliderOpt,
-  SampleFeedList,
-  SampleFeedFilterList,
-  SampleFeedOrderList,
-  FeedMoreOptList,
-} from './structure'
+import {SliderOpt, FeedMoreOptList} from './structure'
+import {SampleFeedList, SampleFeedFilterList, SampleFeedOrderList} from './const'
 import {map} from 'lodash-es'
 import {Outlet, useLocation, useParams} from 'react-router-dom'
 

@@ -10,7 +10,8 @@ import {
   IconButton,
   GatherListItem,
 } from 'hongsi-ui'
-import {SampleCategoryList, SliderOpt} from './structure'
+import {SliderOpt} from './structure'
+import {SampleCategoryList} from './const'
 import {map, filter, size} from 'lodash-es'
 
 import './AddView.scss'

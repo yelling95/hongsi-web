@@ -9,6 +9,22 @@ export const SampleGroupList = range(1, 10, 1).map((item) => ({
   local: '강남구',
 }))
 
+export const SampleFeed = {
+  id: 1,
+  profileUrl: '',
+  username: '홍길동',
+  category: '운동',
+  timing: '3분전',
+  title: '한라산 등반 구합니다!',
+  subtitle:
+    '이번주 금요일 한라산 등반을 가려고 합니다. 같이 가 실분 있으실까요? 저희 그룹에 들어오세요~',
+  likeCnt: 10,
+  commentCnt: 3,
+  gather: false,
+  declare: false,
+  imageList: [],
+}
+
 export const SampleAlbumList = [
   {
     id: 1,
@@ -36,6 +52,28 @@ export const SampleAlbumList = [
     photoCnt: random(),
   },
 ]
+
+export const SampleCategoryList = () => {
+  return [
+    '전체',
+    '일상',
+    '취미생활',
+    '여행 · 맛집',
+    '건강 · 다이어트',
+    '운동 · 스포츠',
+    '재태크 · 부동산',
+    '문화 · 예술',
+    '연애 · 결혼',
+    '채용 · 커리어',
+    '봉사활동',
+    '같이해요',
+  ].map((keyword, index) => {
+    return {
+      id: index,
+      label: keyword,
+    }
+  })
+}
 
 export const SamplePhotoList = range(1, 40, 1).map((id) => ({
   id,

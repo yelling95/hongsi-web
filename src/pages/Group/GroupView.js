@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Sheet, Tab, Tag, SortHeader, Dropdown, GatherListItem} from 'hongsi-ui'
-import {TabList, TagList, SampleFeedOrderList} from './structure'
+import {TabList, TagList} from './structure'
+import {SampleFeedOrderList} from './const'
 import {map} from 'lodash-es'
 import './Group.scss'
 
