@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import {Sheet, SortHeader, Feed, Dropdown, MoreOption} from 'hongsi-ui'
 import {SliderOpt, FeedMoreOptList} from './structure'
 import {SampleFeedList, SampleFeedFilterList, SampleFeedOrderList} from './const'
-import {map} from 'lodash-es'
+import {map, take, takeRight} from 'lodash-es'
 import {Outlet, useLocation, useParams} from 'react-router-dom'
 
 import './Slick.scss'
@@ -24,8 +24,16 @@ function HomeView(props) {
   const [isOpenFilter, setOpenFilter] = useState(false)
   const [isOpenMore, setOpenMore] = useState(false)
 
-  const updateFeedLikeStatus = (feed, like = true) => {
-    console.log(feed.id, like)
+  const updateFeedLikeStatus = (feed, index) => {
+    const prex = take(feedList, index)
+    const post = takeRight(feedList, feedList.length - prex.length - 1)
+    const mid = [
+      {
+        ...feed,
+        like: !feed.like,
+      },
+    ]
+    setFeedList([...prex, ...mid, ...post])
   }
 
   const openFeedCommentPage = (feed) => {
@@ -42,10 +50,11 @@ function HomeView(props) {
         onClickFilter={() => setOpenFilter(true)}
       />
       <div className="scroll_wrap">
-        {map(feedList, (feed) => (
+        {map(feedList, (feed, index) => (
           <Feed
             key={`feed-${feed.id}`}
-            onClickLike={updateFeedLikeStatus}
+            like={feed.like}
+            onClickLike={() => updateFeedLikeStatus(feed, index)}
             onClickComment={openFeedCommentPage}
             onClickMore={() => setOpenMore(true)}>
             {feed.imageList && feed.imageList.length > 0 && (

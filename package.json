@@ -16,7 +16,7 @@
     "classnames": "^2.3.2",
     "dayjs": "^1.11.13",
     "dotenv-webpack": "^8.1.0",
-    "hongsi-ui": "^1.0.79",
+    "hongsi-ui": "^1.0.80",
     "lodash-es": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -44,6 +44,7 @@ export const SampleFeedList = range(1, 11, 1).map((dummy) => {
     commentCnt: 3,
     gather: false,
     declare: false,
+    like: false,
     imageList:
       dummy % 2 === 0
         ? range(1, 11, 1).map((n) => ({
