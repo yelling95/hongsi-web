@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react'
-import {HomeHeader, Footer} from 'hongsi-ui'
+import {HomeHeader, ProfileHeader, Footer} from 'hongsi-ui'
 import {FooterMenus} from './const'
 import {Outlet, useLocation, useParams, useNavigate} from 'react-router-dom'
 import {map} from 'lodash-es'
@@ -31,9 +31,17 @@ function MainView(props) {
     })
   }, [location])
 
+  const isProfile = useMemo(() => {
+    return location.pathname === '/profile'
+  }, [location])
+
   return (
     <div className="main_container">
-      <HomeHeader editUrl="/feed" searchUrl="/search" />
+      {isProfile ? (
+        <ProfileHeader alarmUrl="/alarm" />
+      ) : (
+        <HomeHeader editUrl="/feed" searchUrl="/search" />
+      )}
       <Outlet />
       <Footer menuList={nav} />
     </div>

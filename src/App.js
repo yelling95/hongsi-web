@@ -21,6 +21,7 @@ import {
   ChattingListView,
   ChattingView,
   ReportView,
+  ProfileView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -89,7 +90,7 @@ export default function App(props) {
         {
           id: 'profile',
           path: 'profile',
-          element: <div>profile default</div>,
+          element: <ProfileView />,
           children: [
             {
               id: 'profile-edit',
