@@ -1,0 +1,57 @@
+.report_container {
+  position: relative;
+  .basic_header_container {
+    padding: 0 20px;
+  }
+
+  h1 {
+    height: 66px;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+  }
+
+  .scroll_wrap {
+    height: calc(100vh - 203px);
+    overflow-y: auto;
+    .reason {
+      display: flex;
+      align-items: center;
+      height: 65px;
+      padding: 0 20px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.3px;
+      color: var(--black);
+      cursor: pointer;
+
+      &.selected {
+        background-color: var(--grey-30);
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+
+  &>.button_wrap {
+    padding: 20px;
+    width: 100%;
+    background-color: var(--white);
+
+    .button_container {
+      max-width: 100%;
+    }
+  }
+
+  .snackbar_container {
+    position: absolute;
+    bottom: 90px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+  }
+}

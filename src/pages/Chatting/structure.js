@@ -16,14 +16,14 @@ export const Tabs = [
 export const MoreOptList = () => {
   return [
     {
-      id: 'modify',
+      id: 'exit',
       label: '채팅방 나가기',
       url: '',
     },
     {
-      id: 'delete',
+      id: 'report',
       label: '신고하기',
-      url: 'chat/report',
+      url: '/chat/report',
     },
   ]
 }

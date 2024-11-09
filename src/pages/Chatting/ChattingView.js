@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react'
 import dayjs from 'dayjs'
-import {ChattingHeader, MoreOption, Chat, Chatting} from 'hongsi-ui'
+import {ChattingHeader, MoreOption, Chat, Chatting, Gather, GatherListItem, Icon} from 'hongsi-ui'
 import {map} from 'lodash-es'
 import {MoreOptList, ChattingFormat} from './structure'
 import {useNavigate, useLocation, useParams} from 'react-router-dom'
@@ -14,7 +14,7 @@ const InputInitHeight = 74
 function ChattingView(props) {
   const navigate = useNavigate()
   const location = useLocation()
-  const param = useParams()
+  const {chatId} = useParams()
   const chattingRef = useRef(null)
 
   const [moreOptions, setMoreOptions] = useState(MoreOptList())
@@ -60,9 +60,21 @@ function ChattingView(props) {
       <ChattingHeader
         alarmFg
         title="길동이"
-        goBack={() => navigate(-1)}
+        goBack={() => navigate('/chat')}
         openMore={() => setOpenMore(true)}
       />
+      <div className="group_wrap">
+        <GatherListItem size="sm" />
+        <div className="alarm_wrap">
+          <div className="message">
+            <Icon id="Warning" color="#D64C00" fill width={17} height={17} viewBox="0 0 17 17" />
+            <label>3건의 모임 신청이 있습니다.</label>
+          </div>
+          <div>
+            <a>더보기</a>
+          </div>
+        </div>
+      </div>
       <div className="message_wrap" style={{height: `calc(100% - ${height}px)`}}>
         <div className="date">{dayjs().format('YYYY년 M월 D일')}</div>
         <div className="part">
@@ -95,8 +107,17 @@ function ChattingView(props) {
         options={map(moreOptions, (o) => ({
           ...o,
           click: () => {
-            alert(o.id, o.url)
             setOpenMore(false)
+            if (o.id === 'report') {
+              setTimeout(() => {
+                navigate(`${o.url}`, {
+                  state: {
+                    from: location.pathname,
+                    chatId,
+                  },
+                })
+              }, 300)
+            }
           },
         }))}
       />

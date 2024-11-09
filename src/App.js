@@ -20,6 +20,7 @@ import {
   ResetPasswordView,
   ChattingListView,
   ChattingView,
+  ReportView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -291,7 +292,7 @@ export default function App(props) {
     {
       id: 'chat-report',
       path: 'chat/report',
-      element: <div>chat report</div>,
+      element: <ReportView />,
     },
     {
       id: 'chat-search',
