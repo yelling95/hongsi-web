@@ -26,6 +26,7 @@ import {
   ProfileEditView,
   MyPostView,
   MyLikeView,
+  MyGroupView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -275,7 +276,7 @@ export default function App(props) {
     {
       id: 'mygroup',
       path: 'mygroup',
-      element: <div>mygroup</div>,
+      element: <MyGroupView />,
     },
     {
       id: 'alarm',

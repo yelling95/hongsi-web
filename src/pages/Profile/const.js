@@ -16,6 +16,7 @@ export const ProfileMenus = [
       {
         id: 'mygroup',
         name: '내 모임',
+        link: '/mygroup',
       },
     ],
   },
