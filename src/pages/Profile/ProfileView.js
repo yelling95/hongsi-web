@@ -1,4 +1,5 @@
 import React, {useMemo} from 'react'
+import {useNavigate} from 'react-router-dom'
 import {Profile, Tag, Button, Icon} from 'hongsi-ui'
 import {ProfileMenus} from './const'
 import {map, filter} from 'lodash-es'
@@ -8,6 +9,7 @@ import './Profile.scss'
 function ProfileView(props) {
   const {notauth} = props
   const isNotAuthed = notauth === true
+  const navigate = useNavigate()
 
   const categories = useMemo(() => {
     return filter(ProfileMenus, (category) => {
@@ -50,7 +52,7 @@ function ProfileView(props) {
               <Tag>운동 · 스포츠</Tag>
             </div>
             <div className="button_wrap">
-              <Button>프로필 업데이트</Button>
+              <Button onClick={() => navigate('edit')}>프로필 업데이트</Button>
             </div>
           </>
         )}

@@ -23,6 +23,7 @@ import {
   ReportView,
   ProfileView,
   ChatSearchView,
+  ProfileEditView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -93,11 +94,6 @@ export default function App(props) {
           path: 'profile',
           element: <ProfileView />,
           children: [
-            {
-              id: 'profile-edit',
-              path: 'edit',
-              element: <div>profile edit</div>,
-            },
             {
               id: 'myinfo',
               path: 'myinfo',
@@ -305,6 +301,11 @@ export default function App(props) {
       id: 'chat-search',
       path: 'chat/search',
       element: <ChatSearchView />,
+    },
+    {
+      id: 'profile-edit',
+      path: 'profile/edit',
+      element: <ProfileEditView />,
     },
   ])
 

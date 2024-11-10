@@ -4297,10 +4297,10 @@ hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   dependencies:
     react-is "^16.7.0"
 
-hongsi-ui@^1.0.92:
-  version "1.0.92"
-  resolved "https://registry.yarnpkg.com/hongsi-ui/-/hongsi-ui-1.0.92.tgz#6925fee97e1d94a37968a9cadadf919590155b7c"
-  integrity sha512-abZPeITIhbcOnBE4PiIloPhWhtQJhSrWRAsFvSC15CQALKsj+NZLPCWCmZOYDlZWYSQ0+A0BSFnRw4e/dRpxoA==
+hongsi-ui@^1.0.96:
+  version "1.0.96"
+  resolved "https://registry.yarnpkg.com/hongsi-ui/-/hongsi-ui-1.0.96.tgz#c56d2edefa6d759b6314a79e9a7e34c9babc6722"
+  integrity sha512-i1diXLWlgffbdc3iJkQdvRNm4qBBWdmxzmL905TrUspnUPuPcWE+bhmKpYtFQL7if7mm+5qnFAct9w0sjxMsXA==
   dependencies:
     "@storybook/addon-docs" "^7.5.0"
     "@storybook/addon-mdx-gfm" "^7.5.0"
@@ -6821,9 +6821,9 @@ to-regex-range@^5.0.1:
     is-number "^7.0.0"
 
 tocbot@^4.20.1:
-  version "4.31.0"
-  resolved "https://registry.yarnpkg.com/tocbot/-/tocbot-4.31.0.tgz#6ea23f225f4af6231882a36aba0442109e94e826"
-  integrity sha512-Zd9tt6EQn2bvLSHIcug/Z1Sukyn/XJ62dMK9SjIbtHSDkI+Du40CmBvds6BedzXZe1sS1iPGl4Wup/k4cJkVhQ==
+  version "4.32.2"
+  resolved "https://registry.yarnpkg.com/tocbot/-/tocbot-4.32.2.tgz#24d178e5f13b8fea7aeb5393522b67d718e5083c"
+  integrity sha512-UbVZNXX79LUqMzsnSTwE/YF/PYc2pg3G77D/jcolHd6lmw+oklzfcLtHSsmWBhOf1wfWD1HfYzdjGQef1VcQgg==
 
 toidentifier@1.0.1:
   version "1.0.1"
