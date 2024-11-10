@@ -11,6 +11,7 @@ export const ProfileMenus = [
       {
         id: 'saved',
         name: '찜한 글',
+        link: '/mylike',
       },
       {
         id: 'mygroup',

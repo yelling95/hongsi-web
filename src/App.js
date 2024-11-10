@@ -25,6 +25,7 @@ import {
   ChatSearchView,
   ProfileEditView,
   MyPostView,
+  MyLikeView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -269,7 +270,7 @@ export default function App(props) {
     {
       id: 'mylike',
       path: 'mylike',
-      element: <div>mylike</div>,
+      element: <MyLikeView />,
     },
     {
       id: 'mygroup',
