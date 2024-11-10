@@ -27,6 +27,8 @@ import {
   MyPostView,
   MyLikeView,
   MyGroupView,
+  AlarmView,
+  AlarmSettingView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -281,14 +283,12 @@ export default function App(props) {
     {
       id: 'alarm',
       path: 'alarm',
-      element: <div>alarm</div>,
-      children: [
-        {
-          id: 'alarm-setting',
-          path: 'setting',
-          element: <div>alarm setting</div>,
-        },
-      ],
+      element: <AlarmView />,
+    },
+    {
+      id: 'alarm-setting',
+      path: 'alarm/setting',
+      element: <AlarmSettingView />,
     },
     {
       id: 'notice',

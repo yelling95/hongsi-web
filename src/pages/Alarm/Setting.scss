@@ -1,0 +1,36 @@
+.alarm_setting_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .basic_header_container {
+    padding : 0 20px;
+  }
+
+  .setting_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 65px;
+    
+    h2 {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 600;
+    }
+
+    .switch_container {
+     display: flex; 
+    }
+  }
+
+  .message {
+   font-size: 12px;
+   font-weight: 500;
+   line-height: 17px;
+   text-align: center; 
+   color: var(--grey-80);
+  }
+}
