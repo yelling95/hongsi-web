@@ -24,6 +24,7 @@ import {
   ProfileView,
   ChatSearchView,
   ProfileEditView,
+  MyPostView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -116,59 +117,12 @@ export default function App(props) {
                 },
               ],
             },
-            {
-              id: 'mypost',
-              path: 'mypost',
-              element: <div>mypost</div>,
-            },
-            {
-              id: 'mylike',
-              path: 'mylike',
-              element: <div>mylike</div>,
-            },
-            {
-              id: 'mygroup',
-              path: 'mygroup',
-              element: <div>mygroup</div>,
-            },
-            {
-              id: 'alarm',
-              path: 'alarm',
-              element: <div>alarm</div>,
-              children: [
-                {
-                  id: 'alarm-setting',
-                  path: 'setting',
-                  element: <div>alarm setting</div>,
-                },
-              ],
-            },
           ],
         },
         {
           id: 'profile-notauth',
           path: 'profile/notauth',
           element: <ProfileView notauth />,
-        },
-        {
-          id: 'notice',
-          path: 'notice',
-          element: <div>notice</div>,
-        },
-        {
-          id: 'fnq',
-          path: 'fnq',
-          element: <div>fnq</div>,
-        },
-        {
-          id: 'customer',
-          path: 'customer',
-          element: <div>customer</div>,
-        },
-        {
-          id: 'partnership',
-          path: 'partnership',
-          element: <div>partnership</div>,
         },
       ],
     },
@@ -306,6 +260,53 @@ export default function App(props) {
       id: 'profile-edit',
       path: 'profile/edit',
       element: <ProfileEditView />,
+    },
+    {
+      id: 'mypost',
+      path: 'mypost',
+      element: <MyPostView />,
+    },
+    {
+      id: 'mylike',
+      path: 'mylike',
+      element: <div>mylike</div>,
+    },
+    {
+      id: 'mygroup',
+      path: 'mygroup',
+      element: <div>mygroup</div>,
+    },
+    {
+      id: 'alarm',
+      path: 'alarm',
+      element: <div>alarm</div>,
+      children: [
+        {
+          id: 'alarm-setting',
+          path: 'setting',
+          element: <div>alarm setting</div>,
+        },
+      ],
+    },
+    {
+      id: 'notice',
+      path: 'notice',
+      element: <div>notice</div>,
+    },
+    {
+      id: 'fnq',
+      path: 'fnq',
+      element: <div>fnq</div>,
+    },
+    {
+      id: 'customer',
+      path: 'customer',
+      element: <div>customer</div>,
+    },
+    {
+      id: 'partnership',
+      path: 'partnership',
+      element: <div>partnership</div>,
     },
   ])
 

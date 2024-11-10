@@ -4,15 +4,16 @@ export const ProfileMenus = [
     auth: true,
     menus: [
       {
-        id: 'posint',
+        id: 'mypost',
         name: '작성한 글',
+        link: '/mypost',
       },
       {
         id: 'saved',
         name: '찜한 글',
       },
       {
-        id: 'my-group',
+        id: 'mygroup',
         name: '내 모임',
       },
     ],

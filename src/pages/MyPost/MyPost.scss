@@ -1,0 +1,26 @@
+.mypost_container {
+  height: 100vh;
+
+  .basic_header_container {
+    padding: 0 20px;
+  }
+
+  .empty_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 47px);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--grey-60);
+    background-color: var(--grey-10);
+    
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

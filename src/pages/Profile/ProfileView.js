@@ -60,7 +60,10 @@ function ProfileView(props) {
       {map(categories, (category) => (
         <div key={`category-${category.id}`} className="menu_wrap">
           {map(category.menus, (menu) => (
-            <div key={`menu-${menu.id}`} className="menu">
+            <div
+              key={`menu-${menu.id}`}
+              className="menu"
+              onClick={() => menu.link && navigate(menu.link)}>
               {menu.name}
             </div>
           ))}
