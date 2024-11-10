@@ -34,6 +34,7 @@ function FeedSearchView(props) {
       setKeywords(newKeywords)
       storage.set('keywords', newKeywords)
     }
+    setSearchValue('')
     setSearchKeyword(value)
   }
 

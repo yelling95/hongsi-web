@@ -1,6 +1,7 @@
 export const ProfileMenus = [
   {
     id: 'my',
+    auth: true,
     menus: [
       {
         id: 'posint',
@@ -22,6 +23,7 @@ export const ProfileMenus = [
       {
         id: 'info',
         name: '회원 정보 관리',
+        auth: true,
       },
       {
         id: 'notice',
@@ -59,6 +61,7 @@ export const ProfileMenus = [
       {
         id: 'logout',
         name: '로그아웃',
+        auth: true,
       },
     ],
   },

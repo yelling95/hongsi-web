@@ -33,7 +33,11 @@ function ChattingListView(props) {
       ) : (
         <div className="scroll_wrap">
           {map(SampleChattingList, (chat) => (
-            <ChattingListItem key={`chatting-${chat.id}`} {...chat} />
+            <ChattingListItem
+              key={`chatting-${chat.id}`}
+              {...chat}
+              onClick={() => navigate(`/chat/${chat.id}`)}
+            />
           ))}
         </div>
       )}

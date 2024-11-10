@@ -60,6 +60,7 @@ function ChattingView(props) {
       <ChattingHeader
         alarmFg
         title="길동이"
+        searchUrl="/chat/search"
         goBack={() => navigate('/chat')}
         openMore={() => setOpenMore(true)}
       />

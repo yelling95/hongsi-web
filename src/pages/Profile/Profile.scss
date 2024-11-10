@@ -1,6 +1,6 @@
 .profile_view_container {
   height: calc(100vh - 100px);
-  background-color: var(--gery-10);
+  background-color: var(--grey-10);
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,43 @@
   &>div {
     background-color: var(--white);
   }
-  
+
   .person_wrap {
     padding: 20px;
+
     .profile_wrap {
+      display: flex;
       margin-bottom: 16px;
+      gap: 14px;
+      align-items: center;
     }
+
+    .noauth_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 100%;
+
+      .btn_login {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 30px;
+        }
+      }
+
+      .message {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        color: var(--grey-80);
+        word-break: keep-all;
+      }
+    }  
 
     .introduce {
       margin-bottom: 20px;

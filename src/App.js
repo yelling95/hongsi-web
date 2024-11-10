@@ -22,6 +22,7 @@ import {
   ChattingView,
   ReportView,
   ProfileView,
+  ChatSearchView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -146,27 +147,32 @@ export default function App(props) {
                 },
               ],
             },
-            {
-              id: 'notice',
-              path: 'notice',
-              element: <div>notice</div>,
-            },
-            {
-              id: 'fnq',
-              path: 'fnq',
-              element: <div>fnq</div>,
-            },
-            {
-              id: 'customer',
-              path: 'customer',
-              element: <div>customer</div>,
-            },
-            {
-              id: 'partnership',
-              path: 'partnership',
-              element: <div>partnership</div>,
-            },
           ],
+        },
+        {
+          id: 'profile-notauth',
+          path: 'profile/notauth',
+          element: <ProfileView notauth />,
+        },
+        {
+          id: 'notice',
+          path: 'notice',
+          element: <div>notice</div>,
+        },
+        {
+          id: 'fnq',
+          path: 'fnq',
+          element: <div>fnq</div>,
+        },
+        {
+          id: 'customer',
+          path: 'customer',
+          element: <div>customer</div>,
+        },
+        {
+          id: 'partnership',
+          path: 'partnership',
+          element: <div>partnership</div>,
         },
       ],
     },
@@ -298,7 +304,7 @@ export default function App(props) {
     {
       id: 'chat-search',
       path: 'chat/search',
-      element: <div>chat search</div>,
+      element: <ChatSearchView />,
     },
   ])
 
