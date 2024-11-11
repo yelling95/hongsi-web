@@ -24,6 +24,7 @@ function ChattingView(props) {
   const [list, setList] = useState([])
   const [isMulti, setMulti] = useState(false)
   const [next, setNext] = useState(0)
+  const [isGroup, setIsGroup] = useState(false)
 
   const handleSave = () => {
     const temp = {
@@ -55,27 +56,36 @@ function ChattingView(props) {
     handleHeight()
   }, [value])
 
+  useEffect(() => {
+    if (location.state?.group === true) {
+      setIsGroup(true)
+    }
+  }, [location])
+
   return (
     <div className="chatting_view_container">
       <ChattingHeader
         alarmFg
-        title="길동이"
+        title={isGroup ? '3명' : '길동이'}
         searchUrl="/chat/search"
-        goBack={() => navigate('/chat')}
+        goBack={() => navigate(-1)}
         openMore={() => setOpenMore(true)}
       />
-      <div className="group_wrap">
-        <GatherListItem size="sm" />
-        <div className="alarm_wrap">
-          <div className="message">
-            <Icon id="Warning" color="#D64C00" fill width={17} height={17} viewBox="0 0 17 17" />
-            <label>3건의 모임 신청이 있습니다.</label>
-          </div>
-          <div>
-            <a>더보기</a>
+      {isGroup && (
+        <div className="group_wrap">
+          <GatherListItem size="sm" />
+          <div className="alarm_wrap">
+            <div className="message">
+              <Icon id="Warning" color="#D64C00" fill width={17} height={17} viewBox="0 0 17 17" />
+              <label>3건의 모임 신청이 있습니다.</label>
+            </div>
+            <div>
+              <a>더보기</a>
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
       <div className="message_wrap" style={{height: `calc(100% - ${height}px)`}}>
         <div className="date">{dayjs().format('YYYY년 M월 D일')}</div>
         <div className="part">
