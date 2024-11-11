@@ -30,6 +30,8 @@ import {
   AlarmView,
   AlarmSettingView,
   NoticeView,
+  FaqView,
+  CsView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -297,14 +299,14 @@ export default function App(props) {
       element: <NoticeView />,
     },
     {
-      id: 'fnq',
-      path: 'fnq',
-      element: <div>fnq</div>,
+      id: 'faq',
+      path: 'faq',
+      element: <FaqView />,
     },
     {
-      id: 'customer',
-      path: 'customer',
-      element: <div>customer</div>,
+      id: 'cs',
+      path: 'cs',
+      element: <CsView />,
     },
     {
       id: 'partnership',

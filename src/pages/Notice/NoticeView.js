@@ -15,7 +15,7 @@ function NoticeView(props) {
     <div className="notice_container">
       <BasicHeader goBack={() => navigate(-1)} title="공지사항" />
       <div className="scroll_wrap">
-        <div className="tag_wrap">
+        <div className="tab_wrap">
           <Tab data={TabList} selected={tab.id} onClick={(t) => setTab(t)} />
         </div>
       </div>

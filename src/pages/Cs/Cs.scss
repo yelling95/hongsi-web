@@ -1,0 +1,47 @@
+.cs_container {
+  position: relative;
+  height: 100vh;
+  padding: 0 20px;
+
+  .sheet_container {
+    padding: 20px 0;
+  }
+
+  .sub_message {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    color: var(--grey-80);
+    margin-bottom: 47px;
+  }
+
+  .cs_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .input_container .input_label, .textarea_container .input_label {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 18px;
+      color: var(--grey-80);
+      margin-bottom: 10px;
+    }
+  }
+
+  .agree_wrap {
+    margin-top: 30px;
+  }
+
+  .button_wrap {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 20px;
+    padding: 20px;
+
+    .button_container {
+      max-width: 100%;
+    }
+  }
+}

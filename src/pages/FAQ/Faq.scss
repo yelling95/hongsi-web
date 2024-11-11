@@ -1,4 +1,4 @@
-.notice_container {
+.faq_container {
   height: 100vh;
   overflow: hidden;
 
@@ -35,7 +35,7 @@
     }
   }
 
-  .tab_wrap {
+  .tag_wrap {
     display: flex;
     gap: 8px;
     padding: 20px;
@@ -43,7 +43,7 @@
     
   }
 
-  .notice_list_wrap {
+  .faq_list_wrap {
     height: calc(100% - 118px);
     overflow-y: auto;
 
