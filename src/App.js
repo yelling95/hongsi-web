@@ -29,6 +29,7 @@ import {
   MyGroupView,
   AlarmView,
   AlarmSettingView,
+  NoticeView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -293,7 +294,7 @@ export default function App(props) {
     {
       id: 'notice',
       path: 'notice',
-      element: <div>notice</div>,
+      element: <NoticeView />,
     },
     {
       id: 'fnq',
