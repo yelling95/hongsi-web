@@ -1,3 +1,4 @@
+import {range} from 'lodash-es'
 export const TabList = () => {
   return [
     {
@@ -88,4 +89,13 @@ export const MoreOptList = () => {
       url: '',
     },
   ]
+}
+
+export const SliderOpt = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
 }
