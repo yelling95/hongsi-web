@@ -33,6 +33,7 @@ import {
   FaqView,
   CsView,
   GroupDetailView,
+  GroupJoinView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -59,11 +60,7 @@ export default function App(props) {
               path: 'member',
               element: <div>group member</div>,
             },
-            {
-              id: 'group-join',
-              path: 'join',
-              element: <div>group join</div>,
-            },
+
             {
               id: 'group-report',
               path: 'report',
@@ -313,6 +310,11 @@ export default function App(props) {
       id: 'group-view',
       path: 'group/:groupId',
       element: <GroupDetailView />,
+    },
+    {
+      id: 'group-join',
+      path: 'group/join',
+      element: <GroupJoinView />,
     },
   ])
 

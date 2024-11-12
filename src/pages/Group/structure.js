@@ -81,14 +81,23 @@ export const TagList = {
   ],
 }
 
-export const MoreOptList = () => {
-  return [
-    {
-      id: 'done',
-      label: '모임 종료하기',
-      url: '',
-    },
-  ]
+export const MoreOptList = (key = 'default') => {
+  const options = {
+    default: [
+      {
+        id: 'done',
+        label: '모임 종료하기',
+        url: '',
+      },
+    ],
+    STANDBY: [
+      {
+        id: 'join-cancel',
+        label: '참여 신청 취소하기',
+      },
+    ],
+  }
+  return options[key]
 }
 
 export const SliderOpt = {

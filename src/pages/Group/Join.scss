@@ -1,0 +1,46 @@
+.group_join_container {
+  height: 100vh;
+  position: relative;
+  .basic_header_container {
+    padding: 0 20px;
+  }
+
+  .guide_wrap {
+    padding: 20px;
+
+    h1 {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 30px;
+      color: var(--black);
+      padding: 20px 0;
+      letter-spacing: -0.3px;
+    }
+
+    ol {
+      padding: 20px 0;
+      margin-left: 20px;
+
+      li {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        color: var(--black);
+        margin-bottom: 20px;
+        letter-spacing: -0.3px;
+        word-break: keep-all;
+      }
+    }
+  }
+
+  .button_wrap {
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    bottom: 0;
+
+    .button_container {
+      max-width: 100%;
+    }
+  }
+}

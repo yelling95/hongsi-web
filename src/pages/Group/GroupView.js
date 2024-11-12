@@ -9,15 +9,17 @@ import {
   Button,
   MoreOption,
   Confirm,
+  Icon,
 } from 'hongsi-ui'
 import {TabList, TagList, MoreOptList} from './structure'
 import {SampleFeedOrderList, SampleGroupList} from './const'
 import {map, range, take, takeRight} from 'lodash-es'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useLocation} from 'react-router-dom'
 import './Group.scss'
 
 function GroupView(props) {
   const navigate = useNavigate()
+  const location = useLocation()
   const tabList = TabList()
   const orderList = SampleFeedOrderList()
 
@@ -32,6 +34,7 @@ function GroupView(props) {
   const [groupList, setGroupList] = useState(SampleGroupList)
   const [focusGroup, setFocusGroup] = useState(null)
   const [isShowJoinCancel, setShowJoinCancel] = useState(false)
+  const [isShowJoin, setShowJoin] = useState(false)
 
   const updateGroupLikeStatus = (group, index) => {
     const prex = take(groupList, index)
@@ -79,7 +82,17 @@ function GroupView(props) {
     } else {
       setGroupList(SampleGroupList)
     }
+
+    if (selectedTab?.id === 'my' && selectedTag?.id === 'STANDBY') {
+      setMoreOptions(MoreOptList('STANDBY'))
+    }
   }, [selectedTab, selectedTag])
+
+  useEffect(() => {
+    if (location.state?.join) {
+      setShowJoin(true)
+    }
+  }, [location])
 
   return (
     <div className="group_container">
@@ -98,20 +111,32 @@ function GroupView(props) {
         </div>
       </div>
 
-      <SortHeader order={order?.label} onClickOrder={() => setOpenOrder(true)} />
-      <Dropdown
-        id="order"
-        isShow={isOpenOrder}
-        isShowDimm={true}
-        selected={order?.id}
-        close={() => setOpenOrder(false)}
-        options={map(orderOptions, (o) => ({
-          ...o,
-          click: () => {
-            alert(o.id)
-          },
-        }))}
-      />
+      {selectedTab?.id === 'category' && (
+        <>
+          <SortHeader order={order?.label} onClickOrder={() => setOpenOrder(true)} />
+          <Dropdown
+            id="order"
+            isShow={isOpenOrder}
+            isShowDimm={true}
+            selected={order?.id}
+            close={() => setOpenOrder(false)}
+            options={map(orderOptions, (o) => ({
+              ...o,
+              click: () => {
+                alert(o.id)
+              },
+            }))}
+          />
+        </>
+      )}
+      {selectedTag?.id === 'STANDBY' && (
+        <div className="alarm_wrap">
+          <div className="message">
+            <Icon id="Warning" color="#D64C00" fill width={17} height={17} viewBox="0 0 17 17" />
+            <label>운영자 확인 후 모임에 참여 됩니다</label>
+          </div>
+        </div>
+      )}
       <div className="scroll_wrap">
         {(!groupList || groupList.length === 0) && (
           <div className="empty_wrap">
@@ -155,6 +180,14 @@ function GroupView(props) {
                   </Button>
                 </div>
               )}
+              {selectedTag.id === 'STANDBY' && (
+                <div className="group_button_wrap">
+                  <Button>운영자 1:1대화방</Button>
+                  <Button type="secondary" onClick={() => setShowJoinCancel(true)}>
+                    신청 이력 삭제
+                  </Button>
+                </div>
+              )}
             </div>
           )
         })}
@@ -195,6 +228,19 @@ function GroupView(props) {
           },
         ]}>
         <div>모임 참여를 취소 하시나요?</div>
+      </Confirm>
+      <Confirm
+        isShow={isShowJoin}
+        isShowDimm={true}
+        close={() => {
+          setShowJoin(false)
+          navigate('/group', {replace: true, state: {join: false}})
+        }}>
+        <div>
+          참여 신청 되었습니다.
+          <br />
+          승인이 완료되면 참여가 확정됩니다.
+        </div>
       </Confirm>
     </div>
   )
