@@ -34,6 +34,7 @@ import {
   CsView,
   GroupDetailView,
   GroupJoinView,
+  GroupAddView,
 } from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -65,18 +66,6 @@ export default function App(props) {
               id: 'group-report',
               path: 'report',
               element: <div>group report</div>,
-            },
-            {
-              id: 'group-add',
-              path: 'add',
-              element: <div>group add</div>,
-              children: [
-                {
-                  id: 'group-add-address',
-                  path: 'address',
-                  element: <div>group add address</div>,
-                },
-              ],
             },
             {
               id: 'group-search',
@@ -315,6 +304,18 @@ export default function App(props) {
       id: 'group-join',
       path: 'group/join',
       element: <GroupJoinView />,
+    },
+    {
+      id: 'group-add',
+      path: 'group/add',
+      element: <GroupAddView />,
+      children: [
+        {
+          id: 'group-add-address',
+          path: 'address',
+          element: <div>group add address</div>,
+        },
+      ],
     },
   ])
 

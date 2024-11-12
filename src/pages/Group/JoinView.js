@@ -3,9 +3,9 @@ import {className} from 'classnames'
 import {BasicHeader, Button} from 'hongsi-ui'
 import {useNavigate} from 'react-router-dom'
 
-import './Join.scss'
+import './JoinView.scss'
 
-function Join(props) {
+function JoinView(props) {
   const navigate = useNavigate()
 
   return (
@@ -40,4 +40,4 @@ function Join(props) {
   )
 }
 
-export default Join
+export default JoinView
