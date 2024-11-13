@@ -317,6 +317,11 @@ export default function App(props) {
         },
       ],
     },
+    {
+      id: 'group-image-search',
+      path: 'group/search/image',
+      element: <ImageSearchView />,
+    },
   ])
 
   return (

@@ -74,6 +74,7 @@ function AddView(props) {
           <TextArea
             id="contents"
             placeholder="내용을 입력해주세요."
+            onKeyup={() => {}}
             onChange={({id, value}) => setContetns(value)}
           />
         </div>
@@ -103,13 +104,13 @@ function AddView(props) {
         <IconButton
           type="Photo"
           color="#393939"
-          onClick={() => navigate('/feed/search/image', {state: {images, group}})}>
+          onClick={() => navigate('/feed/search/image', {state: {from: '/feed', images, group}})}>
           사진
         </IconButton>
         <IconButton
           type="Group"
           color="#393939"
-          onClick={() => navigate('/feed/search/group', {state: {images, group}})}>
+          onClick={() => navigate('/feed/search/group', {state: {from: '/feed', images, group}})}>
           모임
         </IconButton>
       </div>

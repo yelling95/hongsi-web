@@ -54,7 +54,7 @@ function ImageSearchView(props) {
           }}
           onSelectImage={() => {
             const images = filter(SamplePhotoList, (photo) => selection.current.includes(photo.id))
-            navigate('/feed', {
+            navigate(location.state?.from ? location.state.from : '/feed', {
               state: {
                 ...location.state,
                 images,
